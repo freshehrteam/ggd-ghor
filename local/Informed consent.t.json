@@ -1,0 +1,2985 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "bc050859-2db7-49f5-be89-c34aba5c8b9a",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2024-06-17"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "3b00929e6ec1674199f165f419a25b4c",
+      "PARENT:MD5-CAM-1.0.1" : "7229DFAFA43B2D9ABD13B0228E2F0181"
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ru" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ru"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "fr" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "fr"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-ACTION.informed_consent.v0",
+  "differential" : false,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-ACTION.informedconsent.v0"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "ACTION",
+    "occurrences" : "1..1",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "ism_transition",
+      "existence" : "1..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "1..1",
+        "nodeId" : "at0013",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "526" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0013" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "1..1",
+        "nodeId" : "at0019",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "527" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0019" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "1..1",
+        "nodeId" : "at0018",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "528" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0018" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "1..1",
+        "nodeId" : "at0027",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "529" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0027" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "1..1",
+        "nodeId" : "at0014",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "245", "526" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0014" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "1..1",
+        "nodeId" : "at0015",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "245" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0015" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "1..1",
+        "nodeId" : "at0021",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "245" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0021" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "1..1",
+        "nodeId" : "at0016",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "531" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0016" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "1..1",
+        "nodeId" : "at0017",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "531" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0017" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ISM_TRANSITION",
+        "occurrences" : "1..1",
+        "nodeId" : "at0022",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "current_state",
+          "existence" : "1..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "openehr"
+                },
+                "constraint" : [ "532" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        }, {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "careflow_step",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0022" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "description",
+      "existence" : "1..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "occurrences" : "1..1",
+        "nodeId" : "at0001",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "items",
+          "existence" : "0..1",
+          "cardinality" : {
+            "@type" : "CARDINALITY",
+            "interval" : "1..*",
+            "ordered" : false,
+            "unique" : false
+          },
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "1..*",
+            "nodeId" : "at0002",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0030",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0031",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0011",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "ARCHETYPE_SLOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0003",
+            "includes" : [ {
+              "@type" : "ASSERTION",
+              "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.consent_details(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.procedure_details(-[a-zA-Z0-9_]+)*\\.v1/}",
+              "expression" : {
+                "@type" : "BINARY_OPERATOR",
+                "type" : "BOOLEAN",
+                "operator" : "matches",
+                "leftOperand" : {
+                  "@type" : "MODEL_REFERENCE",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Attribute",
+                  "path" : "archetype_id/value"
+                },
+                "rightOperand" : {
+                  "@type" : "CONSTRAINT",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Constraint",
+                  "item" : {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "/openEHR-EHR-CLUSTER\\.consent_details(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.procedure_details(-[a-zA-Z0-9_]+)*\\.v1/" ]
+                  }
+                },
+                "precedenceOverriden" : false
+              },
+              "variables" : [ ]
+            } ],
+            "excludes" : [ ],
+            "closed" : false
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0004",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_CODED_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "defining_code",
+                  "existence" : "1..1",
+                  "children" : [ {
+                    "@type" : "C_TERMINOLOGY_CODE",
+                    "rmTypeName" : "CODE_PHRASE",
+                    "occurrences" : "1..1",
+                    "terminologyId" : {
+                      "value" : "local"
+                    },
+                    "constraint" : [ "at0005", "at0006" ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0007",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0008",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_DATE_TIME",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0009",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_DATE_TIME",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..*",
+            "nodeId" : "at0010",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0012",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_URI",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0036",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "ARCHETYPE_SLOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0037",
+            "includes" : [ {
+              "@type" : "ASSERTION",
+              "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.multimedia\\.v0/}",
+              "expression" : {
+                "@type" : "BINARY_OPERATOR",
+                "type" : "BOOLEAN",
+                "operator" : "matches",
+                "leftOperand" : {
+                  "@type" : "MODEL_REFERENCE",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Attribute",
+                  "path" : "archetype_id/value"
+                },
+                "rightOperand" : {
+                  "@type" : "CONSTRAINT",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Constraint",
+                  "item" : {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "/openEHR-EHR-CLUSTER\\.multimedia\\.v0/" ]
+                  }
+                },
+                "precedenceOverriden" : false
+              },
+              "variables" : [ ]
+            } ],
+            "excludes" : [ ],
+            "closed" : false
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "protocol",
+      "existence" : "0..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "occurrences" : "1..1",
+        "nodeId" : "at0024",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "items",
+          "existence" : "0..1",
+          "cardinality" : {
+            "@type" : "CARDINALITY",
+            "interval" : "0..*",
+            "ordered" : false,
+            "unique" : false
+          },
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0025",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0026",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_DATE_TIME",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "ARCHETYPE_SLOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0028",
+            "includes" : [ {
+              "@type" : "ASSERTION",
+              "stringExpression" : "archetype_id/value matches {/.*/}",
+              "expression" : {
+                "@type" : "BINARY_OPERATOR",
+                "type" : "BOOLEAN",
+                "operator" : "matches",
+                "leftOperand" : {
+                  "@type" : "MODEL_REFERENCE",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Attribute",
+                  "path" : "archetype_id/value"
+                },
+                "rightOperand" : {
+                  "@type" : "CONSTRAINT",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Constraint",
+                  "item" : {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "/.*/" ]
+                  }
+                },
+                "precedenceOverriden" : false
+              },
+              "variables" : [ ]
+            } ],
+            "excludes" : [ ],
+            "closed" : false
+          }, {
+            "@type" : "ARCHETYPE_SLOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0029",
+            "includes" : [ {
+              "@type" : "ASSERTION",
+              "stringExpression" : "archetype_id/value matches {/.*/}",
+              "expression" : {
+                "@type" : "BINARY_OPERATOR",
+                "type" : "BOOLEAN",
+                "operator" : "matches",
+                "leftOperand" : {
+                  "@type" : "MODEL_REFERENCE",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Attribute",
+                  "path" : "archetype_id/value"
+                },
+                "rightOperand" : {
+                  "@type" : "CONSTRAINT",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Constraint",
+                  "item" : {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "/.*/" ]
+                  }
+                },
+                "precedenceOverriden" : false
+              },
+              "variables" : [ ]
+            } ],
+            "excludes" : [ ],
+            "closed" : false
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0033.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "items",
+              "existence" : "1..1",
+              "cardinality" : {
+                "@type" : "CARDINALITY",
+                "interval" : "1..*",
+                "ordered" : false,
+                "unique" : false
+              },
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "ELEMENT",
+                "occurrences" : "0..0",
+                "nodeId" : "at0032.1",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "value",
+                  "existence" : "0..1",
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "DV_TEXT",
+                    "occurrences" : "1..1",
+                    "attributes" : [ ],
+                    "attributeTuples" : [ ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              }, {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "ELEMENT",
+                "occurrences" : "0..0",
+                "nodeId" : "at0035.1",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "value",
+                  "existence" : "0..1",
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "DV_TEXT",
+                    "occurrences" : "1..1",
+                    "attributes" : [ ],
+                    "attributeTuples" : [ ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              }, {
+                "@type" : "ARCHETYPE_SLOT",
+                "rmTypeName" : "CLUSTER",
+                "occurrences" : "0..*",
+                "nodeId" : "at0038",
+                "includes" : [ {
+                  "@type" : "ASSERTION",
+                  "stringExpression" : "archetype_id/value matches {/.*/}",
+                  "expression" : {
+                    "@type" : "BINARY_OPERATOR",
+                    "type" : "BOOLEAN",
+                    "operator" : "matches",
+                    "leftOperand" : {
+                      "@type" : "MODEL_REFERENCE",
+                      "type" : "STRING",
+                      "precedenceOverriden" : false,
+                      "referenceType" : "Attribute",
+                      "path" : "archetype_id/value"
+                    },
+                    "rightOperand" : {
+                      "@type" : "CONSTRAINT",
+                      "type" : "STRING",
+                      "precedenceOverriden" : false,
+                      "referenceType" : "Constraint",
+                      "item" : {
+                        "@type" : "C_STRING",
+                        "constraint" : [ "/.*/" ]
+                      }
+                    },
+                    "precedenceOverriden" : false
+                  },
+                  "variables" : [ ]
+                } ],
+                "excludes" : [ ],
+                "closed" : false
+              }, {
+                "@type" : "C_ARCHETYPE_ROOT",
+                "rmTypeName" : "CLUSTER",
+                "occurrences" : "0..*",
+                "nodeId" : "at0038.1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ],
+                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-multimedia-001.v0",
+                "referenceType" : "archetypeOverlay"
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Informed consent",
+          "description" : "Record of status and details of informed consent from an individual (or the individual's agent/proxy) for a proposed procedure, trial or other healthcare-related activity (including treatments and investigations), based upon a clear appreciation and understanding of the facts, implications, and possible future consequences by the consenting party."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Procedure/Trial/Activity",
+          "description" : "Identification of the procedure, clinical trial or healthcare-related activity (including correct side/correct site, where appropriate) against which the consent status and details are recorded."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Details",
+          "description" : "Additional structured details about the procedure/trial/activity itself or additional structured consent details.",
+          "comment" : "For example: intent/purpose; anaesthetic details; disclosure of material risks; and proposed benefits discussed."
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Form of consent",
+          "description" : "Form of the consent sought or provided."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Written",
+          "description" : "Format of the consent is written."
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Verbal",
+          "description" : "Format of the consent is verbal."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Reason",
+          "description" : "Reason that the care pathway step for the identified procedure, clinical trial or healthcare-related activity was carried out.",
+          "comment" : "For example, the reason for 'consent refused' or 'consent withdrawn'."
+        },
+        "at0008" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0008",
+          "text" : "Start date",
+          "description" : "Date, and optional time, when validity of the informed consent becomes active."
+        },
+        "at0009" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0009",
+          "text" : "End date",
+          "description" : "Date, and optional time, when validity of the informed consent ceased."
+        },
+        "at0010" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0010",
+          "text" : "Caveat",
+          "description" : "Details of any qualifications or exemptions to the informed consent."
+        },
+        "at0011" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Consent description",
+          "description" : "Narrative description of the informed consent required or recorded prior to performing the proposed procedure, clinical trial or healthcare-related activity."
+        },
+        "at0012" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0012",
+          "text" : "Evidence link",
+          "description" : "Link to evidence of consent.",
+          "comment" : "For example, a hyperlink to the evidence held elsewhere in the health record."
+        },
+        "at0013" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0013",
+          "text" : "Planned",
+          "description" : "Need for informed consent is identified."
+        },
+        "at0014" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0014",
+          "text" : "Informed consent requested",
+          "description" : "Informed consent has been requested from the patient or patient's agent, but no response has been received."
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Informed consent provided",
+          "description" : "Informed consent has been provided by the patient or patient's agent."
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Informed consent refused",
+          "description" : "In response to a request for informed consent, it has been refused by patient or patient's agent."
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "Informed consent withdrawn",
+          "description" : "Following initial provision of informed consent, it has been withrawn by the patient or patient's agent."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Cancelled",
+          "description" : "Intent to request informed consent has been cancelled, prior to requesting consent from patient or patient's agent.."
+        },
+        "at0019" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0019",
+          "text" : "Postponed",
+          "description" : "Intent to request informed consent has been postponed."
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Informed consent not obtained",
+          "description" : "Informed consent was not obtainable from either the patient or patient's advocate."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Completed",
+          "description" : "Informed consent has been provided by the patient or patient's agent and the activity is now complete."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Consent document used",
+          "description" : "Identification of the form or document used to obtain consent."
+        },
+        "at0026" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "Review date",
+          "description" : "Date when consent status is due for review."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Appointment scheduled",
+          "description" : "An appointment has been scheduled to request consent."
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Consent requester",
+          "description" : "Details about the healthcare provider who is requesting or recording the consent.",
+          "comment" : "Insert archetyped demographic details in this SLOT if it is not possible to use other_participations."
+        },
+        "at0029" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0029",
+          "text" : "Consent provider",
+          "description" : "Details about the subject (or subject's agent) who is being requested for, or providing, the consent for the procedure, clinical trial or healthcare-related activity.",
+          "comment" : "Insert archetyped demographic details in this SLOT if it is not possible to use other_participations."
+        },
+        "at0030" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0030",
+          "text" : "Procedure/Trial/Activity description",
+          "description" : "Narrative description of the procedure, clinical trial or healthcare-related activity."
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "Intent",
+          "description" : "Description of the intent of the procedure, clinical trial or healthcare-related activity."
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "Name",
+          "description" : "Identification of the information made available.",
+          "comment" : "For example, the name of the form."
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Patient information",
+          "description" : "Details about Patient Information made available to the subject or subject's agent."
+        },
+        "at0035" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0035",
+          "text" : "Description",
+          "description" : "Narrative description of the patient information made available."
+        },
+        "at0036" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0036",
+          "text" : "Comment",
+          "description" : "Additional narrative about the informed consent activity, not captured in other fields."
+        },
+        "at0037" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0037",
+          "text" : "Evidence details",
+          "description" : "Digital representation of the evidence of consent.",
+          "comment" : "For example: a PDF of a consent authorisation form; or an audio file."
+        },
+        "at0038" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038",
+          "text" : "Multimedia representation",
+          "description" : "Digital representation of the evidence of consent."
+        },
+        "at0035.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0035",
+          "text" : "Description",
+          "description" : "Narrative description of the patient information made available."
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038",
+          "text" : "Multimedia representation",
+          "description" : "Digital representation of the evidence of consent."
+        },
+        "at0032.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "Name",
+          "description" : "Identification of the information made available.",
+          "comment" : "For example, the name of the form."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Informed consent",
+          "description" : "Record of status and details of informed consent from an individual (or the individual's agent/proxy) for a proposed procedure, trial or other healthcare-related activity (including treatments and investigations), based upon a clear appreciation and understanding of the facts, implications, and possible future consequences by the consenting party."
+        },
+        "at0033.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Patient information",
+          "description" : "Details about Patient Information made available to the subject or subject's agent."
+        }
+      },
+      "ru" : {
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Информированное согласие",
+          "description" : "Запись о состоянии и  деталях информированного согласия пациента (доверенного лица) на предлагаемую процедуру, исследование или другую активность (включая лечение или обследование), основанного на полном понимании и принятии фактов, осложнений и возможных последствий. "
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "*Tree(en)",
+          "description" : "*@ internal @(en)"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Процедура/дейстиве",
+          "description" : "Название процедуры/действия (включая область), на которую записан статус согласия"
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Подробности",
+          "description" : "Дополнительные структурированные подробности процедуры (или другой деятельности, связанной со здоровьем)",
+          "comment" : "например: цели и задачи; подробности анестезии; описание рисков; ожидаемая польза."
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Форма согласия",
+          "description" : "Форма согласия"
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Записанное",
+          "description" : "Согласие написано от руки"
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "на словах",
+          "description" : "Согласие дано устно"
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Причина",
+          "description" : "Причина задержки получения согласия",
+          "comment" : "например, почему согласие не подписано или изъято"
+        },
+        "at0008" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0008",
+          "text" : "Дата начала",
+          "description" : "Дата, при необходимости, время, когда полученное согласие стало активным "
+        },
+        "at0009" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0009",
+          "text" : "Конец",
+          "description" : "Дата (время), когда согласие утратило свою силу. "
+        },
+        "at0010" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0010",
+          "text" : "Особые указания",
+          "description" : "Подробности по любым уточнениям информированного согласия"
+        },
+        "at0011" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Описание согласия",
+          "description" : "текстовое описание информированного согласия, требующегося для проведения процедуры или других действий"
+        },
+        "at0012" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0012",
+          "text" : "Доказательства согласия",
+          "description" : "Доказательства статуса согласия",
+          "comment" : "Например, фотография рукописного согласия или аудиозапись устного согласия"
+        },
+        "at0013" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0013",
+          "text" : "Запланировано",
+          "description" : "Установлена необходимость в информированном согласии"
+        },
+        "at0014" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0014",
+          "text" : "Запрошено",
+          "description" : "Информированное согласие запрошено у пациента или его представителя, но ответ не получен"
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Получено",
+          "description" : "Информированное согласие получено от пациента ли его представителя"
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Отказано",
+          "description" : "В получении согласия отказано пациентом или его представиетелм"
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "Изъято",
+          "description" : "Поле начального получения согласия, оно было изъято пациентом или его представителем"
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Отменено",
+          "description" : "Необходмиость в согласии отпала до того, как он было запрошено"
+        },
+        "at0019" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0019",
+          "text" : "Отложено",
+          "description" : "Запрос на согласие отложен"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Не получено",
+          "description" : "Информированное согласие не получено"
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Выполнено",
+          "description" : "Информированное согласие было получено, и действие выполнено"
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "*Tree(en)",
+          "description" : "*@ internal @(en)"
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Используемый документ",
+          "description" : "Идентификатор формы или документа согласия"
+        },
+        "at0026" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "Дата пересмотра",
+          "description" : "Дата, когда статус согласия был изменен"
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Запланирована встреча",
+          "description" : "Запланирована встреча для получения согласия"
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Заказчик согласия",
+          "description" : "*Details about the healthcare provider who is requesting or recording the consent.(en)"
+        },
+        "at0029" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0029",
+          "text" : "*Consent Provider(en)",
+          "description" : "*Details about the subject (or subject's agent) who is being requested for, or providing, the consent for the procedure, clinical trial or healthcare-related activity.(en)"
+        },
+        "at0030" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0030",
+          "text" : "Описание действия",
+          "description" : "Текстовое описание процедуры, действия или клинического исследования"
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "Цель",
+          "description" : "Описание цели процедуры/исследования или другой деятельности, связанной со здоровьем."
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "*Name(en)",
+          "description" : "*Identification of the information made available.(en)"
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "*Patient Information(en)",
+          "description" : "*Details about Patient Information made available to the subject or subject's agent.(en)"
+        },
+        "at0035" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0035",
+          "text" : "*Description(en)",
+          "description" : "*Narrative description of the patient information made available.(en)"
+        },
+        "at0036" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0036",
+          "text" : "*Comment (en)",
+          "description" : "*Additional narrative about the informed consent activity, not captured in other fields. (en)"
+        },
+        "at0037" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0037",
+          "text" : "*Evidence details (en)",
+          "description" : "*Digital representation of the evidence of consent. (en)",
+          "comment" : "*For example: a PDF of a consent authorisation form; or an audio file. (en)"
+        },
+        "at0038" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038",
+          "text" : "*Multimedia representation (en)",
+          "description" : "*Digital representation of the evidence of consent. (en)"
+        },
+        "at0035.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0035",
+          "text" : "*Description(en)",
+          "description" : "*Narrative description of the patient information made available.(en)"
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038",
+          "text" : "*Multimedia representation (en)",
+          "description" : "*Digital representation of the evidence of consent. (en)"
+        },
+        "at0032.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "*Name(en)",
+          "description" : "*Identification of the information made available.(en)"
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Информированное согласие",
+          "description" : "Запись о состоянии и  деталях информированного согласия пациента (доверенного лица) на предлагаемую процедуру, исследование или другую активность (включая лечение или обследование), основанного на полном понимании и принятии фактов, осложнений и возможных последствий. "
+        },
+        "at0033.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "*Patient Information(en)",
+          "description" : "*Details about Patient Information made available to the subject or subject's agent.(en)"
+        }
+      },
+      "de" : {
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Einwilligungserklärung",
+          "description" : "Aufzeichnungen über den Status und Einzelheiten der Einwilligungserklärung eines Patienten (oder seines Vertreters) zur einen vorgeschlagenen Prozedur, Studie oder einen anderen gesundheitsbezogenen Aktivität (einschließlich Behandlungen und Untersuchungen) auf der Grundlage einer klaren Einschätzung und eines klaren Verständnisses der Fakten, Auswirkungen und möglichen zukünftigen Konsequenzen durch den Patienten oder dessen Vertreter."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Prozedur / Studie / Aktivität",
+          "description" : "Identifizierung der Prozedur, klinischen Studie oder der gesundheitsbezogenen Aktivität (einschließlich der richtigen Stelle / des richtigen Standorts, falls zutreffend), für die der Einwilligungsstatus und Details aufgezeichnet werden."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Einzelheiten",
+          "description" : "Zusätzliche strukturierte Details zur Prozedur / Studie / zur Aktivität selbst oder zusätzliche strukturierte Details der Einwilligung.",
+          "comment" : "Zum Beispiel: Absicht / Zweck; anästhetische Details; Offenlegung wesentlicher Risiken; und diskutierte vorgeschlagene Vorteile."
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Form der Einwilligung",
+          "description" : "Form der beantragten oder erteilten Einwilligung."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Schriftlich",
+          "description" : "Das Format der Einwilligung ist schriftlich."
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Mündlich",
+          "description" : "Das Format der Einwilligung ist mündlich."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Grund",
+          "description" : "Grund, warum der Verlaufsschritt für die benannte Prozedur, klinische Studie oder die gesundheitsbezogene Aktivität durchgeführt wurde.",
+          "comment" : "Zum Beispiel der Grund für \"Einwilligung verweigert\" oder \"Einwilligung widerrufen\"."
+        },
+        "at0008" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0008",
+          "text" : "Beginn",
+          "description" : "Datum und optionale Uhrzeit, zu der die Gültigkeit der Einwilligungserklärung wirksam wird."
+        },
+        "at0009" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0009",
+          "text" : "Endtermin",
+          "description" : "Datum und optionale Uhrzeit, zu der die Gültigkeit der Einwilligungserklärung abgelaufen ist."
+        },
+        "at0010" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0010",
+          "text" : "Vorbehalt",
+          "description" : "Einzelheiten zu Bedingungen oder Ausnahmen der Einwilligungserklärung."
+        },
+        "at0011" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Beschreibung der Einwilligung",
+          "description" : "Beschreibung der Einwilligungserklärung, die erforderlich ist oder aufgezeichnet werden soll, bevor die vorgeschlagene Prozedur, klinische Prüfung oder gesundheitsbezogene Aktivitäten durchgeführt werden."
+        },
+        "at0012" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0012",
+          "text" : "Einwilligungsbeweis",
+          "description" : "Nachweis des Zustimmungsstatus.",
+          "comment" : "Beispielsweise wird eine Audio-Einwilligungserklärung angefordert oder ein Bild der schriftlichen Einwilligung erhalten."
+        },
+        "at0013" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0013",
+          "text" : "Geplant",
+          "description" : "Die Notwendigkeit einer Einwilligungserklärung wird festgestellt."
+        },
+        "at0014" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0014",
+          "text" : "Einwilligung erbeten",
+          "description" : "Die Einwilligungserklärung wurde vom Patienten oder seinem Vertreter angefragt, es ist jedoch keine Antwort eingegangen."
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Einwilligung erteilt",
+          "description" : "Die Einwilligungserklärung wurde vom Patienten oder seinem Vertreter erteilt."
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Einwilligung verweigert",
+          "description" : "Als Antwort auf eine Anfrage zur Einwilligungserklärung, wurde sie vom Patienten oder seinem Vertreter abgelehnt."
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "Einwilligung widerrufen",
+          "description" : "Nach der ersten Übermittlung einer Einwilligungserklärung wurde diese vom Patienten oder seinem Vertreter widerrufen."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Abgesagt",
+          "description" : "Die Absicht, eine Einwilligungserklärung anzufordern, wurde aufgehoben, bevor die Einwilligung des Patienten oder seines Vertreters angefordert wurde."
+        },
+        "at0019" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0019",
+          "text" : "Verschoben",
+          "description" : "Die Absicht, eine Einwilligungserklärung anzufordern, wurde verschoben."
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Einwilligung nicht erhalten",
+          "description" : "Eine Einwilligungserklärung war weder vom Patienten noch vom Vertreter des Patienten erhältlich."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Abgeschlossen",
+          "description" : "Der Patient oder sein Vertreter hat eine Einwilligungserklärung abgegeben und die Aktivität ist nun abgeschlossen."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Verwendetes Einwilligungsdokument",
+          "description" : "Identifizierung des verwendeten Einwilligungsformulars oder Dokuments."
+        },
+        "at0026" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "Prüfungsdatum",
+          "description" : "Datum, an dem der Einwilligungsstatus überprüft werden muss."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Termin geplant",
+          "description" : "Es wurde ein Termin vereinbart, um die Zustimmung einzuholen."
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Anforderer der Einwilligungserklärung",
+          "description" : "Angaben zum Gesundheitsdienstleister, der die Einwilligung anfordert oder aufzeichnet.",
+          "comment" : "Fügen Sie archetypisierte demografische Details in diesen SLOT ein, wenn es nicht möglich ist, other_participations zu verwenden."
+        },
+        "at0029" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0029",
+          "text" : "Patient/Einwilligende Person",
+          "description" : "Details zu der Person (oder dem Vertreter der Person), die um die Einwilligung zur Prozedur, klinischen Prüfung oder gesundheitsbezogenen Aktivität gebeten wird oder diese erteilt.",
+          "comment" : "Fügen Sie archetypisierte demografische Details in diesen SLOT ein, wenn es nicht möglich ist, other_participations zu verwenden."
+        },
+        "at0030" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0030",
+          "text" : "Beschreibung der Prozedur / Studie / Aktivität",
+          "description" : "Beschreibung der Prozedur, klinischen Prüfung oder der gesundheitsbezogenen Aktivität."
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "Absicht",
+          "description" : "Beschreibung der Absicht der Prozedur, klinischen Prüfung oder der gesundheitsbezogenen Aktivität."
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "Name",
+          "description" : "Identifizierung der zur Verfügung gestellten Information.",
+          "comment" : "Zum Beispiel der Name des Formulars."
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Patienteninformation",
+          "description" : "Details zur Patienteninformation, die der Person oder dem Vertreter der Person zur Verfügung gestellt werden."
+        },
+        "at0035" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0035",
+          "text" : "Beschreibung",
+          "description" : "Beschreibung der zur Verfügung gestellten Patienteninformation."
+        },
+        "at0036" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0036",
+          "text" : "*Comment (en)",
+          "description" : "*Additional narrative about the informed consent activity, not captured in other fields. (en)"
+        },
+        "at0037" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0037",
+          "text" : "*Evidence details (en)",
+          "description" : "*Digital representation of the evidence of consent. (en)",
+          "comment" : "*For example: a PDF of a consent authorisation form; or an audio file. (en)"
+        },
+        "at0038" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038",
+          "text" : "*Multimedia representation (en)",
+          "description" : "*Digital representation of the evidence of consent. (en)"
+        },
+        "at0035.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0035",
+          "text" : "Beschreibung",
+          "description" : "Beschreibung der zur Verfügung gestellten Patienteninformation."
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038",
+          "text" : "*Multimedia representation (en)",
+          "description" : "*Digital representation of the evidence of consent. (en)"
+        },
+        "at0032.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "Name",
+          "description" : "Identifizierung der zur Verfügung gestellten Information.",
+          "comment" : "Zum Beispiel der Name des Formulars."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Einwilligungserklärung",
+          "description" : "Aufzeichnungen über den Status und Einzelheiten der Einwilligungserklärung eines Patienten (oder seines Vertreters) zur einen vorgeschlagenen Prozedur, Studie oder einen anderen gesundheitsbezogenen Aktivität (einschließlich Behandlungen und Untersuchungen) auf der Grundlage einer klaren Einschätzung und eines klaren Verständnisses der Fakten, Auswirkungen und möglichen zukünftigen Konsequenzen durch den Patienten oder dessen Vertreter."
+        },
+        "at0033.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Patienteninformation",
+          "description" : "Details zur Patienteninformation, die der Person oder dem Vertreter der Person zur Verfügung gestellt werden."
+        }
+      },
+      "fr" : {
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Consentement éclairé",
+          "description" : "Enregistrement de l'état et des détails du consentement éclairé d'une personne (ou de son agent/proxy) pour une procédure, un essai ou une autre activité liée aux soins (y compris les traitements et les enquêtes), basé sur une appréciation et une compréhension claires des faits, des implications et des éventuelles conséquences futures par la partie consentante."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Procédure/Essai/Activité",
+          "description" : "Identification de la procédure, de l'essai clinique ou de l'activité liée aux soins (y compris le côté correct/le site correct, le cas échéant) par rapport à laquelle le statut et les détails du consentement sont enregistrés."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Détails",
+          "description" : "Détails structurés supplémentaires sur la procédure/essai/activité elle-même ou détails supplémentaires sur le consentement structuré.",
+          "comment" : "Par exemple : intention/objectif ; détails de l'anesthésie ; divulgation des risques matériels ; et discussion des avantages proposés."
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Forme du consentement",
+          "description" : "Forme du consentement demandé ou fourni."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Ecrit",
+          "description" : "Le format du consentement est écrit."
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Verbal",
+          "description" : "La forme du consentement est verbale."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Motif",
+          "description" : "Raison pour laquelle l'étape du parcours de soins pour la procédure, l'essai clinique ou l'activité liée aux soins de santé identifiés a été effectuée.",
+          "comment" : "Par exemple, la raison du \"consentement refusé\" ou du \"consentement retiré\"."
+        },
+        "at0008" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0008",
+          "text" : "Date de début",
+          "description" : "Date, et heure facultative, à laquelle la validité du consentement éclairé devient active."
+        },
+        "at0009" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0009",
+          "text" : "Date de fin",
+          "description" : "Date et, le cas échéant, heure à laquelle la validité du consentement éclairé a cessé."
+        },
+        "at0010" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0010",
+          "text" : "Caveat",
+          "description" : "Détails de toute réserve ou exemption au consentement éclairé."
+        },
+        "at0011" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Description du consentement",
+          "description" : "Description narrative du consentement éclairé requis ou enregistré avant l'exécution de la procédure, de l'essai clinique ou de l'activité liée aux soins proposés."
+        },
+        "at0012" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0012",
+          "text" : "Lien vers les preuves",
+          "description" : "Lien vers les preuves du consentement.",
+          "comment" : "Par exemple, un hyperlien vers les preuves contenues dans le dossier médical."
+        },
+        "at0013" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0013",
+          "text" : "Prévu",
+          "description" : "La nécessité d'un consentement éclairé est identifiée."
+        },
+        "at0014" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0014",
+          "text" : "Consentement éclairé demandé",
+          "description" : "Le consentement éclairé a été demandé au patient ou à son représentant, mais aucune réponse n'a été reçue."
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Consentement éclairé fourni",
+          "description" : "Le consentement éclairé a été fourni par le patient ou son représentant."
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Consentement éclairé refusé",
+          "description" : "En réponse à une demande de consentement éclairé, celui-ci a été refusé par le patient ou son représentant."
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "Consentement éclairé retiré",
+          "description" : "Après la fourniture initiale du consentement éclairé, celui-ci a été retiré par le patient ou son représentant."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Annulé",
+          "description" : "L'intention de demander le consentement éclairé a été annulée, avant de demander le consentement du patient ou de son représentant ."
+        },
+        "at0019" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0019",
+          "text" : "Reporté",
+          "description" : "L'intention de demander le consentement éclairé a été reportée."
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Consentement éclairé non obtenu",
+          "description" : "Le consentement éclairé n'a pas pu être obtenu du patient ou de son représentant."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Terminé",
+          "description" : "Le consentement éclairé a été fourni par le patient ou son représentant et l'activité est maintenant terminée."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Document de consentement utilisé",
+          "description" : "Identification du formulaire ou du document utilisé pour obtenir le consentement."
+        },
+        "at0026" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "Date de révision",
+          "description" : "Date à laquelle le statut du consentement doit être réexaminé."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Rendez-vous prévu",
+          "description" : "Un rendez-vous a été fixé pour demander le consentement."
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Demandeur de consentement",
+          "description" : "Détails sur le prestataire de soins qui demande ou enregistre le consentement.",
+          "comment" : "Insérez des détails démographiques archétypés dans cette FENÊTRE s'il n'est pas possible d'utiliser d'autres_participations."
+        },
+        "at0029" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0029",
+          "text" : "Fournisseur de consentement",
+          "description" : "Détails sur le sujet (ou son agent) à qui l'on demande ou qui fournit le consentement pour la procédure, l'essai clinique ou l'activité liée aux soins.",
+          "comment" : "Insérez des données démographiques archétypales dans cette FENÊTRE s'il n'est pas possible d'utiliser d'autres_participations."
+        },
+        "at0030" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0030",
+          "text" : "Description de la procédure/essai/activité",
+          "description" : "Description narrative de la procédure, de l'essai clinique ou de l'activité liée aux soins."
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "Intention",
+          "description" : "Description de l'intention de la procédure, de l'essai clinique ou de l'activité liée aux soins."
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "Nom",
+          "description" : "Identification des informations mises à disposition.",
+          "comment" : "Par exemple, le nom du formulaire."
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Information des patients",
+          "description" : "Détails sur les informations relatives au patient mises à la disposition du sujet ou de son agent."
+        },
+        "at0035" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0035",
+          "text" : "Description",
+          "description" : "Description narrative des informations sur le patient mises à disposition."
+        },
+        "at0036" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0036",
+          "text" : "Commentaire",
+          "description" : "Description complémentaire de l'activité de consentement éclairé, qui n'a pas été saisie dans d'autres domaines."
+        },
+        "at0037" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0037",
+          "text" : "Détails des preuves",
+          "description" : "Représentation numérique de la preuve du consentement.",
+          "comment" : "Par exemple : un PDF d'un formulaire d'autorisation de consentement ; ou un fichier audio."
+        },
+        "at0038" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038",
+          "text" : "Représentation multimédia",
+          "description" : "Représentation numérique de la preuve du consentement."
+        },
+        "at0035.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0035",
+          "text" : "Description",
+          "description" : "Description narrative des informations sur le patient mises à disposition."
+        },
+        "at0038.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0038",
+          "text" : "Représentation multimédia",
+          "description" : "Représentation numérique de la preuve du consentement."
+        },
+        "at0032.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "Nom",
+          "description" : "Identification des informations mises à disposition.",
+          "comment" : "Par exemple, le nom du formulaire."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Consentement éclairé",
+          "description" : "Enregistrement de l'état et des détails du consentement éclairé d'une personne (ou de son agent/proxy) pour une procédure, un essai ou une autre activité liée aux soins (y compris les traitements et les enquêtes), basé sur une appréciation et une compréhension claires des faits, des implications et des éventuelles conséquences futures par la partie consentante."
+        },
+        "at0033.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Information des patients",
+          "description" : "Détails sur les informations relatives au patient mises à la disposition du sujet ou de son agent."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "7caf8293-52e4-3619-8aa4-f0ccde430f7f",
+  "rmName" : "openehr",
+  "rmRelease" : "1.0.3",
+  "generated" : true,
+  "templateId" : "Informed consent",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "bdb6a2b5-0fa8-4add-826d-315da6972451",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "68035082e6cf03c1a31ebde51d1d8150"
+      },
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Dokumentation von Metadaten zu multimedialen klinischen Daten, die nicht im Multimedia-Datentyp erfasst werden.",
+          "keywords" : [ "Bild", "Audio", "Ton", "Text", "Video", "Videosequenz", "Anwendung", "Fotografie", "Animation", "Grafik" ],
+          "use" : "Zur Dokumentation von Metadaten zu multimedialen klinischen Daten, die nicht im Multimedia-Datentyp erfasst werden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere metadata om en multimediarepresentasjon av kliniske data som ikke er dekket av kun datatypen Multimedia.",
+          "keywords" : [ "bilde", "lyd", "tekst", "video", "applikasjon" ],
+          "use" : "Brukes for å registrere ytterligere metadata om en multimediarepresentasjon av kliniske data som ikke er dekket av kun datatypen Mulitmedia.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para gravar detalhes de metadados sobre uma representação multimídia dos dados clínicos não capturados usando o tipo de dado de multimídia sozinho.",
+          "keywords" : [ "imagem", "áudio", "texto", "vídeo", "aplicação" ],
+          "use" : "Usado para gravar metadados adicionais sobre uma representação multimídia do dado clínico que não é capturado usando o tipo de dado multimídia sozinho.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record metadata details about a multimedia representation of the clinical data that is not captured using the Multimedia data type alone.",
+          "keywords" : [ "image", "audio", "text", "video", "application" ],
+          "use" : "Use to record additional metadata about a multimedia representation of clincal data that is not captured using the Multimedia data type alone.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.multimedia.v0",
+    "differential" : false,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-multimedia-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "occurrences" : "1..1",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "1..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0002",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0005",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_MULTIMEDIA",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "media_type",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "openEHR"
+                  },
+                  "constraint" : [ "417", "418", "425", "426", "427", "428", "429", "517", "518", "519" ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0008",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_URI",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0003",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0009",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0006",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0007",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Multimedia Resource",
+            "description" : "Details about an multimedia representation of the clinical data."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Multimedia",
+            "description" : "Multimedia representation of the clinical observation or finding."
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Name",
+            "description" : "Title or identification of the multimedia resource."
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Source",
+            "description" : "The source of the multimedia resource."
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Date created",
+            "description" : "Date/time that the multimedia resource was created."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Description",
+            "description" : "Narrative description of the multimedia resource."
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Date published",
+            "description" : "Date/time that the multimedia resource was published."
+          },
+          "at0007" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Version",
+            "description" : "The version of the multimedia resource."
+          },
+          "at0008" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0008",
+            "text" : "URL",
+            "description" : "Internet link to the multimedia resource."
+          },
+          "at0009" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009",
+            "text" : "Author",
+            "description" : "Name of the creator of the resource."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Multimedia Resource",
+            "description" : "Details about an multimedia representation of the clinical data."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Multimedia",
+            "description" : "Multimedia representation of the clinical observation or finding."
+          }
+        },
+        "pt-br" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Recurso de multimídia",
+            "description" : "Detalhes sobre a representação multimídia dos dados clínicos."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Recurso de multimídia",
+            "description" : "Detalhes sobre a representação multimídia dos dados clínicos."
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Título",
+            "description" : "Nome do recurso multimídia."
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Fonte",
+            "description" : "A fonte do recurso multimídia."
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Data de criação",
+            "description" : "Data/hora na qual o recurso multimídia foi criado."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Descrição",
+            "description" : "Descrição narrativa do recurso multimídia."
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "*Date published(en)",
+            "description" : "*Date/time that the multimedia resource was published.(en)"
+          },
+          "at0007" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "*Version(en)",
+            "description" : "*The version of the multimedia resource.(en)"
+          },
+          "at0008" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0008",
+            "text" : "*URL(en)",
+            "description" : "*Internet link to the multimedia resource.(en)"
+          },
+          "at0009" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009",
+            "text" : "*Author(en)",
+            "description" : "*Name of the creator of the resource.(en)"
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Recurso de multimídia",
+            "description" : "Detalhes sobre a representação multimídia dos dados clínicos."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Recurso de multimídia",
+            "description" : "Detalhes sobre a representação multimídia dos dados clínicos."
+          }
+        },
+        "de" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Multimedia-Ressource",
+            "description" : "Details zur multimedialen Darstellung der klinischen Daten."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Multimedia",
+            "description" : "Multimediale Darstellung der klinischen Beobachtung oder des Befundes."
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Name",
+            "description" : "Titel oder Bezeichnung der Multimedia-Ressource."
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Quelle",
+            "description" : "Die Quelle der Multimedia-Ressource."
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Datum der Erstellung",
+            "description" : "Datum/Uhrzeit an dem die Multimedia-Ressource erstellt wurde."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Beschreibung",
+            "description" : "Beschreibung der Multimedia-Ressource."
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Datum der Veröffentlichung",
+            "description" : "Datum/Uhrzeit an dem die Multimedia-Ressource veröffentlicht wurde."
+          },
+          "at0007" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Version",
+            "description" : "Die Version der Multimedia-Ressource."
+          },
+          "at0008" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0008",
+            "text" : "URL",
+            "description" : "Internetlink zur Multimedia-Ressource."
+          },
+          "at0009" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009",
+            "text" : "Autor",
+            "description" : "Name des Autors, der die Ressource erstellt hat."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Multimedia-Ressource",
+            "description" : "Details zur multimedialen Darstellung der klinischen Daten."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Multimedia",
+            "description" : "Multimediale Darstellung der klinischen Beobachtung oder des Befundes."
+          }
+        },
+        "nb" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Multimediaressurs",
+            "description" : "Detaljer om en multimediarepresentasjon av kliniske data."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Multimedia",
+            "description" : "Multimediarepresentasjon av den kliniske observasjonen eller funnet."
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Navn",
+            "description" : "Tittel eller identifikasjon av multimediaressursen."
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Kilde",
+            "description" : "Kilden til multimediaressursen."
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Laget dato",
+            "description" : "Dato/tid multimediaressursen ble laget."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Beskrivelse",
+            "description" : "Fritekstbeskrivelse av multimediaressursen."
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Publisert dato",
+            "description" : "Dato/tid multimediaressursen ble publisert."
+          },
+          "at0007" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Versjon",
+            "description" : "Multimediaressursens versjon."
+          },
+          "at0008" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0008",
+            "text" : "URL",
+            "description" : "Internettlenke til multimediaressursen."
+          },
+          "at0009" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009",
+            "text" : "Forfatter",
+            "description" : "Navnet på den som laget ressursen."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Multimediaressurs",
+            "description" : "Detaljer om en multimediarepresentasjon av kliniske data."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Multimedia",
+            "description" : "Multimediarepresentasjon av den kliniske observasjonen eller funnet."
+          }
+        },
+        "fr" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Ressource multimédia",
+            "description" : "Détails sur une représentation multimédia des données cliniques."
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Multimédia",
+            "description" : "Représentation multimédia de l'observation ou du résultat clinique."
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Nom",
+            "description" : "Titre ou identification de la ressource multimédia."
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Source",
+            "description" : "La source de la ressource multimédia."
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Date de création",
+            "description" : "Date/heure de création de la ressource multimédia."
+          },
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Description",
+            "description" : "Description narrative de la ressource multimédia."
+          },
+          "at0006" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0006",
+            "text" : "Date de publication",
+            "description" : "Date/heure de publication de la ressource multimédia."
+          },
+          "at0007" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0007",
+            "text" : "Version",
+            "description" : "La version de la ressource multimédia."
+          },
+          "at0008" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0008",
+            "text" : "URL",
+            "description" : "Lien Internet vers la ressource multimédia."
+          },
+          "at0009" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0009",
+            "text" : "Auteur",
+            "description" : "Le nom du créateur de la ressource."
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Ressource multimédia",
+            "description" : "Détails sur une représentation multimédia des données cliniques."
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Multimédia",
+            "description" : "Représentation multimédia de l'observation ou du résultat clinique."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "df30e547-5350-42a5-94be-436a585b92fe",
+    "rmName" : "openehr",
+    "rmRelease" : "1.0.3",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Ramona Wellmann",
+        "organisation" : "Medizinische Hochschule Hannover",
+        "email" : "wellmann.ramona@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "John Tore Valand",
+        "organisation" : "Helse Bergen HF, Norway",
+        "email" : "john.tore.valand@helse-bergen.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Fernanda Maia Ewerton",
+        "organisation" : "Core Consulting",
+        "email" : "fernanda.maiaewerton@gmail.com"
+      },
+      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Bassem Khouzam",
+        "organisation" : "Medtronic",
+        "email" : "bassem.khouzam@medtronic.com"
+      },
+      "otherDetails" : { }
+    } ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ru"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "fr"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  } ]
+}
