@@ -21,7 +21,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.2",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "4ca93eac7391b607dd00112192ddef3d",
+      "MD5-CAM-1.0.1" : "606082b13bbcf32bc0452706e8a0c388",
       "PARENT:MD5-CAM-1.0.1" : "005501C1FA493A4838F5F1121F2870EC"
     },
     "details" : {
@@ -967,6 +967,15 @@
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-management_screening-001.v1",
+          "referenceType" : "archetypeOverlay"
+        }, {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "EVALUATION",
+          "occurrences" : "0..1",
+          "nodeId" : "at0.11",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-cause_of_death-001.v1",
           "referenceType" : "archetypeOverlay"
         }, {
           "@type" : "C_ARCHETYPE_ROOT",
@@ -2367,8 +2376,9 @@
             "rmAttributeName" : "events",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
+              "rmTypeName" : "POINT_EVENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
@@ -2382,9 +2392,25 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0034.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_STRING",
+                              "rmTypeName" : "STRING",
+                              "constraint" : [ "Measles screening" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
@@ -2427,6 +2453,7 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..1",
                       "nodeId" : "at0029.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -2434,26 +2461,6 @@
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_DATE_TIME",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_TEXT",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_DURATION",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
                           "attributes" : [ ],
                           "attributeTuples" : [ ]
                         } ]
@@ -2469,7 +2476,7 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0022",
+                      "nodeId" : "at0022.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
@@ -2489,7 +2496,7 @@
                                 "children" : [ {
                                   "@type" : "C_STRING",
                                   "rmTypeName" : "STRING",
-                                  "constraint" : [ "Measles" ]
+                                  "constraint" : [ "Rash" ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -2537,33 +2544,14 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..1",
                           "nodeId" : "at0037.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
                             "rmAttributeName" : "value",
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DURATION",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            }, {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
                               "attributes" : [ ],
                               "attributeTuples" : [ ]
                             } ]
@@ -2604,12 +2592,31 @@
             "description" : "Series of questions and associated answers used to screen for symptoms or signs.",
             "comment" : "The answers may be self-reported."
           },
+          "at0029.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0029.1",
+            "text" : "First day of symptoms",
+            "description" : "Timing of the inital recognition of any symptom or sign relevant for the screening purpose.",
+            "comment" : "The 'Onset' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture the onset of symptoms or signs. The specific and intended semantics can be further clarified in a template. \r\n\r\nFor example:\r\nDate/time for the date the symptom started. Interval of date/time for a period of time eg. between 1940 and 1942. Text for descriptions like 'Immediately after the operation', or 'Up to one week ago', 'Up to two weeks ago', 'Three weeks ago'. Duration for the individual's age at the onset. Interval of Duration for the approximate age of the individual at the time of onset."
+          },
           "at0037.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0037.1",
             "text" : "First day of rash",
             "description" : "Indication of timing related to the specific symptom or sign.",
             "comment" : "The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when the specific symptom or sign occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the specific symptom or sign; the interval of time during which the specific symptom or sign occured; the duration of the specific symptom or sign; the age of the individual at the time of the specific symptom or sign occured; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year."
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Rash",
+            "description" : "Details about a specific symptom or sign or grouping of symptoms or signs relatevant for the screening purpose."
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Point in time",
+            "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
           }
         },
         "fi" : { },
@@ -2708,7 +2715,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "3101AA5CF62C9C9421943678C9FE1E73"
+        "PARENT:MD5-CAM-1.0.1" : "D0FAB6715F1DF1D308A5529460DA77B4"
       },
       "details" : { }
     },
@@ -2734,8 +2741,9 @@
             "rmAttributeName" : "events",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
+              "rmTypeName" : "POINT_EVENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
@@ -2762,7 +2770,7 @@
                             "children" : [ {
                               "@type" : "C_STRING",
                               "rmTypeName" : "STRING",
-                              "constraint" : [ "Measles" ]
+                              "constraint" : [ "Measles screening" ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -2816,7 +2824,7 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0022",
+                      "nodeId" : "at0022.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
@@ -2918,6 +2926,13 @@
                             } ]
                           } ],
                           "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0025.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
                         } ]
                       } ],
                       "attributeTuples" : [ ]
@@ -2965,6 +2980,12 @@
             "text" : "Specific complications",
             "description" : "Identification of an issue, problem or diagnosis, or grouping of issues, problems or diagnoses, by name.",
             "comment" : "Coding of the 'Problem/diagnosis name' with a terminology is preferred, where possible."
+          },
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Point in time",
+            "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
           }
         },
         "nb" : {
@@ -2976,11 +2997,39 @@
           }
         },
         "de" : {
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Vorhanden?",
+            "description" : "*Is there a history of the specific issue, problem or diagnosis? (en)",
+            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+          },
+          "at0040" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0040",
+            "text" : "*Timing (en)",
+            "description" : "*Indication of timing related to the issue, problem or diagnosis. (en)",
+            "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
+          },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "Vorhanden?",
+            "description" : "*Is there a history of the specific issue, problem or diagnosis? (en)",
+            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+          },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0040.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0040.1",
+            "text" : "*Timing (en)",
+            "description" : "*Indication of timing related to the issue, problem or diagnosis. (en)",
+            "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
           }
         },
         "nl" : {
@@ -3094,8 +3143,9 @@
             "rmAttributeName" : "events",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "EVENT",
-              "nodeId" : "at0002",
+              "rmTypeName" : "POINT_EVENT",
+              "occurrences" : "0..1",
+              "nodeId" : "at0002.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
@@ -3109,13 +3159,30 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0034.1",
-                      "attributes" : [ ],
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_STRING",
+                              "rmTypeName" : "STRING",
+                              "constraint" : [ "Measles screening" ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0039.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -3128,12 +3195,13 @@
                             "rmAttributeName" : "defining_code",
                             "children" : [ {
                               "@type" : "C_TERMINOLOGY_CODE",
-                              "rmTypeName" : "CODE_PHRASE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
                               "occurrences" : "1..1",
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "at0040", "at0041", "at0042" ]
+                              "constraint" : [ "ac0.3" ],
+                              "selectedTerminologies" : [ ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -3160,7 +3228,8 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0022",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0022.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
@@ -3190,7 +3259,6 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
                           "nodeId" : "at0005.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -3208,7 +3276,7 @@
                                   "terminologyId" : {
                                     "value" : "local"
                                   },
-                                  "constraint" : [ "ac0.1" ],
+                                  "constraint" : [ "ac0.2" ],
                                   "selectedTerminologies" : [ ]
                                 } ]
                               } ],
@@ -3338,41 +3406,71 @@
             "text" : "Reason for hospitalisation",
             "description" : "Additional narrative about a specific management or treatment question, not captured in other fields."
           },
-          "at0039.1" : {
+          "at0005.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039.1",
+            "code" : "at0005.1",
             "text" : "Patient hospitalised?",
-            "description" : "Is there a history of management or treatment activities relevant for the screening purpose?",
-            "comment" : "The management or treatment may have been completed or could be ongoing.\r\n\r\nIn a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+            "description" : "Is there a history of the specific management or treatment activity?",
+            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
           },
-          "ac0.1" : {
+          "at0002.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.1",
+            "text" : "Point in time",
+            "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
+          },
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.3",
             "description" : ""
           }
         },
         "nb" : {
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
             "description" : ""
           }
         },
         "de" : {
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
             "description" : ""
           }
         },
         "it" : {
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
             "description" : ""
           }
         }
@@ -3384,6 +3482,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.1",
           "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0023", "at0024", "at0027" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0040", "at0041", "at0042" ]
         }
       }
     },
@@ -3449,7 +3557,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "3101AA5CF62C9C9421943678C9FE1E73"
+        "PARENT:MD5-CAM-1.0.1" : "D0FAB6715F1DF1D308A5529460DA77B4"
       },
       "details" : { }
     },
@@ -3503,7 +3611,7 @@
                             "children" : [ {
                               "@type" : "C_STRING",
                               "rmTypeName" : "STRING",
-                              "constraint" : [ "Patient death due to disease" ]
+                              "constraint" : [ "Measles screening" ]
                             } ]
                           } ],
                           "attributeTuples" : [ ]
@@ -3513,6 +3621,7 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0028.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -3530,7 +3639,7 @@
                               "terminologyId" : {
                                 "value" : "local"
                               },
-                              "constraint" : [ "ac0.1" ],
+                              "constraint" : [ "ac0.2" ],
                               "selectedTerminologies" : [ ]
                             } ]
                           } ],
@@ -3558,7 +3667,7 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "nodeId" : "at0022",
+                      "nodeId" : "at0022.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
@@ -3588,7 +3697,6 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
                           "nodeId" : "at0005.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -3601,12 +3709,13 @@
                                 "rmAttributeName" : "defining_code",
                                 "children" : [ {
                                   "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "CODE_PHRASE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "1..1",
                                   "terminologyId" : {
                                     "value" : "local"
                                   },
-                                  "constraint" : [ "at0023", "at0024", "at0027" ]
+                                  "constraint" : [ "ac0.3" ],
+                                  "selectedTerminologies" : [ ]
                                 } ]
                               } ],
                               "attributeTuples" : [ ]
@@ -3694,18 +3803,37 @@
             "description" : "Series of questions and associated answers used to screen for issues, problems or diagnoses.",
             "comment" : "The answers may be self-reported."
           },
-          "at0028.1" : {
+          "at0005.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028.1",
-            "text" : "Patient died due to disease?",
-            "description" : "Is there a history of any issues, problems or diagnoses relevant for the screening purpose?",
+            "code" : "at0005.1",
+            "text" : "Patient died related to disease",
+            "description" : "Is there a history of the specific issue, problem or diagnosis?",
             "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
           },
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
             "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "at0004.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004.1",
+            "text" : "Disease name",
+            "description" : "Identification of an issue, problem or diagnosis, or grouping of issues, problems or diagnoses, by name.",
+            "comment" : "Coding of the 'Problem/diagnosis name' with a terminology is preferred, where possible."
+          },
+          "at0022.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0022.1",
+            "text" : "Patient died related to diesase",
+            "description" : "Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose."
           }
         },
         "nb" : {
@@ -3716,14 +3844,34 @@
             "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge bekymringer, plager, problemer eller diagnoser.",
             "comment" : "Svarene kan være selvrapporterte."
           },
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
             "description" : ""
           }
         },
         "de" : {
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Vorhanden?",
+            "description" : "*Is there a history of the specific issue, problem or diagnosis? (en)",
+            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+          },
+          "at0040" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0040",
+            "text" : "*Timing (en)",
+            "description" : "*Indication of timing related to the issue, problem or diagnosis. (en)",
+            "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
+          },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
@@ -3731,10 +3879,30 @@
             "description" : "Eine Reihe von Fragen und zugehörigen Antworten, die zum Screening auf Vorhandensein von Beschwerden, Problemen oder Diagnosen verwendet werden.",
             "comment" : "Die Antworten können selbst berichtet werden."
           },
-          "ac0.1" : {
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "Vorhanden?",
+            "description" : "*Is there a history of the specific issue, problem or diagnosis? (en)",
+            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+          },
+          "at0040.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0040.1",
+            "text" : "*Timing (en)",
+            "description" : "*Indication of timing related to the issue, problem or diagnosis. (en)",
+            "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
+          },
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
             "description" : ""
           }
         },
@@ -3746,10 +3914,16 @@
             "description" : "*Series of questions and associated answers used to screen for issues, problems or diagnoses. (en)",
             "comment" : "*The answers may be self-reported.(en)"
           },
-          "ac0.1" : {
+          "ac0.2" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.1",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
             "description" : ""
           }
         }
@@ -3761,6 +3935,16 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.1",
           "members" : [ "at0031", "at0032", "at0033" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0031", "at0032", "at0033" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0023", "at0024", "at0027" ]
         }
       }
     },
@@ -3830,7 +4014,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "3101AA5CF62C9C9421943678C9FE1E73"
+        "PARENT:MD5-CAM-1.0.1" : "D0FAB6715F1DF1D308A5529460DA77B4"
       },
       "details" : { }
     },
@@ -4031,6 +4215,13 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Clinical diagnosis confirmation",
+            "description" : "Series of questions and associated answers used to screen for issues, problems or diagnoses.",
+            "comment" : "The answers may be self-reported."
+          },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
@@ -4054,6 +4245,20 @@
           }
         },
         "de" : {
+          "at0005" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005",
+            "text" : "Vorhanden?",
+            "description" : "*Is there a history of the specific issue, problem or diagnosis? (en)",
+            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+          },
+          "at0040" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0040",
+            "text" : "*Timing (en)",
+            "description" : "*Indication of timing related to the issue, problem or diagnosis. (en)",
+            "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
+          },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
@@ -4061,11 +4266,25 @@
             "description" : "Eine Reihe von Fragen und zugehörigen Antworten, die zum Screening auf Vorhandensein von Beschwerden, Problemen oder Diagnosen verwendet werden.",
             "comment" : "Die Antworten können selbst berichtet werden."
           },
+          "at0005.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0005.1",
+            "text" : "Vorhanden?",
+            "description" : "*Is there a history of the specific issue, problem or diagnosis? (en)",
+            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+          },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.1",
             "description" : ""
+          },
+          "at0040.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0040.1",
+            "text" : "*Timing (en)",
+            "description" : "*Indication of timing related to the issue, problem or diagnosis. (en)",
+            "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
           }
         },
         "nl" : {
@@ -4147,6 +4366,492 @@
         "organisation" : "Nedap Healthcare",
         "email" : "martijn.vaneenennaam@nedap.com"
       },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "5dabdba9-3e25-4a5c-a0e7-f2262fd7cc45",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "0D9F95A78B7883FA506FE7DEAAB85AFA"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-EVALUATION.cause_of_death.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-EVALUATION.ovl-cause_of_death-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "EVALUATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0001",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0019.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at0002.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_STRING",
+                      "rmTypeName" : "STRING",
+                      "constraint" : [ "Measles", "/.+/" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0017.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DURATION",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DURATION",
+                      "rmTypeName" : "DURATION",
+                      "occurrences" : "1..1",
+                      "constraint" : [ {
+                        "lower" : "PT0S",
+                        "lowerIncluded" : true,
+                        "upperIncluded" : false,
+                        "lowerUnbounded" : false,
+                        "upperUnbounded" : true
+                      } ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "lower",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DURATION",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_DURATION",
+                          "rmTypeName" : "DURATION",
+                          "occurrences" : "1..1",
+                          "constraint" : [ {
+                            "lower" : "PT0S",
+                            "lowerIncluded" : true,
+                            "upperIncluded" : false,
+                            "lowerUnbounded" : false,
+                            "upperUnbounded" : true
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  }, {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "upper",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DURATION",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_DURATION",
+                          "rmTypeName" : "DURATION",
+                          "occurrences" : "1..1",
+                          "constraint" : [ {
+                            "lower" : "PT0S",
+                            "lowerIncluded" : true,
+                            "upperIncluded" : false,
+                            "lowerUnbounded" : false,
+                            "upperUnbounded" : true
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..0",
+              "nodeId" : "at0003.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0005.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_CODED_TEXT",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "defining_code",
+                        "children" : [ {
+                          "@type" : "C_TERMINOLOGY_CODE",
+                          "rmTypeName" : "CODE_PHRASE",
+                          "occurrences" : "1..1",
+                          "terminologyId" : {
+                            "value" : "local"
+                          },
+                          "constraint" : [ "at0006", "at0007", "at0008" ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0009.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "lower",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DURATION",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_DURATION",
+                              "rmTypeName" : "DURATION",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : "PT0S",
+                                "lowerIncluded" : true,
+                                "upperIncluded" : false,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : true
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      }, {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "upper",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DURATION",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_DURATION",
+                              "rmTypeName" : "DURATION",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : "PT0S",
+                                "lowerIncluded" : true,
+                                "upperIncluded" : false,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : true
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DURATION",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_DURATION",
+                          "rmTypeName" : "DURATION",
+                          "occurrences" : "1..1",
+                          "constraint" : [ {
+                            "lower" : "PT0S",
+                            "lowerIncluded" : true,
+                            "upperIncluded" : false,
+                            "lowerUnbounded" : false,
+                            "upperUnbounded" : true
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DATE_TIME",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..0",
+              "nodeId" : "at0020.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "items",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ELEMENT",
+                  "occurrences" : "0..0",
+                  "nodeId" : "at0021.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_TEXT",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "lower",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DURATION",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_DURATION",
+                              "rmTypeName" : "DURATION",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : "PT0S",
+                                "lowerIncluded" : true,
+                                "upperIncluded" : false,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : true
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      }, {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "upper",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_DURATION",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_DURATION",
+                              "rmTypeName" : "DURATION",
+                              "occurrences" : "1..1",
+                              "constraint" : [ {
+                                "lower" : "PT0S",
+                                "lowerIncluded" : true,
+                                "upperIncluded" : false,
+                                "lowerUnbounded" : false,
+                                "upperUnbounded" : true
+                              } ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DURATION",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_DURATION",
+                          "rmTypeName" : "DURATION",
+                          "occurrences" : "1..1",
+                          "constraint" : [ {
+                            "lower" : "PT0S",
+                            "lowerIncluded" : true,
+                            "upperIncluded" : false,
+                            "lowerUnbounded" : false,
+                            "upperUnbounded" : true
+                          } ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "DV_DATE_TIME",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0013.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0014",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at0015.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : { },
+        "nb" : { },
+        "de" : { }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "366b3487-dc9b-4bf2-944e-87f2ed284e6e",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Hannes Bornhorst, Natalia Strauch, Darin Leonhardt",
+        "organisation" : "Medizinische Hochschule Hannover, PLRI",
+        "email" : "Strauch.Natalia@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Mikkel Johan Gaup Grønmo, John Tore Valand",
+        "organisation" : "Regional forvaltning EPJ, Helse Nord, Helse Bergen",
+        "email" : "mikkel.johan.gaup.gronmo@helse-nord.no, john.tore.valand@helse-vest-ikt.no"
+      },
+      "accreditation" : "Nasjonal IKT HF",
       "otherDetails" : { }
     } ]
   } ],
