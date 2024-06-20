@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.3",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "878a2e9d59f56ba6b8d9ee8d19e297f2",
+      "MD5-CAM-1.0.1" : "a1a2d94396486b5d7992d2b60764b359",
       "PARENT:MD5-CAM-1.0.1" : "005501C1FA493A4838F5F1121F2870EC"
     },
     "details" : {
@@ -215,26 +215,32 @@
               "children" : [ {
                 "@type" : "C_COMPLEX_OBJECT",
                 "rmTypeName" : "ELEMENT",
-                "occurrences" : "0..0",
                 "nodeId" : "at0002.1",
                 "attributes" : [ ],
                 "attributeTuples" : [ ]
               }, {
                 "@type" : "C_COMPLEX_OBJECT",
                 "rmTypeName" : "ELEMENT",
-                "occurrences" : "0..0",
                 "nodeId" : "at0005.1",
-                "attributes" : [ ],
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "value",
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "DV_TEXT",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "value",
+                      "children" : [ {
+                        "@type" : "C_STRING",
+                        "rmTypeName" : "STRING",
+                        "constraint" : [ "Accepted", "Rejected", "Active", "Complete" ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  } ]
+                } ],
                 "attributeTuples" : [ ]
-              }, {
-                "@type" : "C_ARCHETYPE_ROOT",
-                "rmTypeName" : "CLUSTER",
-                "occurrences" : "0..1",
-                "nodeId" : "at0006.1",
-                "attributes" : [ ],
-                "attributeTuples" : [ ],
-                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-care_journey_metadata-001.v0",
-                "referenceType" : "archetypeOverlay"
               } ]
             } ],
             "attributeTuples" : [ ]
@@ -327,6 +333,12 @@
           "code" : "at0000.1",
           "text" : "Infection control case",
           "description" : "Document to communicate information to others, commonly in response to a request from another party."
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Case identifier",
+          "description" : "Identification information about the report."
         }
       },
       "es-ar" : {
@@ -4740,133 +4752,6 @@
       "author" : { },
       "otherDetails" : { }
     } ]
-  }, {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "cd1cd4af-21d3-41d1-b726-9ca43aaaacb7",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "73FB8E597AB789C389FEB2AC3ECBC60B"
-      },
-      "details" : {
-        "en" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "en"
-          },
-          "keywords" : [ ],
-          "copyright" : "© Apperta Foundation",
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.care_journey_metadata.v0",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-care_journey_metadata-001.v0"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0001.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_IDENTIFIER",
-              "defaultValue" : {
-                "@type" : "DV_IDENTIFIER"
-              },
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0003.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_IDENTIFIER",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "en" : {
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003.1",
-            "text" : "Case identifier",
-            "description" : "A patient-journey specific identifier i.e unique to a patient's journey along a specific care pathway."
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "0742452c-9047-42cb-aafe-654f90469e4c",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "en"
-    },
-    "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
     "uid" : "f3165df2-46c9-489d-b178-16c59da53ffb",
