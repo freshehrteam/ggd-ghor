@@ -23,7 +23,7 @@ description
 		>
 	>
 	other_details = <
-		["MD5-CAM-1.0.1"] = <"BB015AB1339D0A00FEBE87CA2BEEAE03">
+		["MD5-CAM-1.0.1"] = <"0ba6ec27dcc3d4cbe9ee47f4b8519ba2">
 		["build_uid"] = <"c89794b3-ecbb-31d8-a6b0-3afc199fe6d2">
 	>
 
@@ -38,6 +38,14 @@ definition
 			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Death due to primary diagnosis?
 				value matches {
 					DV_BOOLEAN matches {*}
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0004,    -- Yes
+							at0005,    -- No
+							at0006]    -- Unknown
+						}
+					}
 				}
 			}
 			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Cause of death
@@ -67,6 +75,18 @@ ontology
 				["at0003"] = <
 					text = <"Cause of death">
 					description = <"The cause of death.">
+				>
+				["at0004"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Unknown">
+					description = <"">
 				>
 			>
 		>
