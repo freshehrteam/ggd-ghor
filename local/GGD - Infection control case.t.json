@@ -24,7 +24,7 @@
       "custodian_namespace" : "",
       "sem_ver" : "1.0.0-alpha.4",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "419c900c6781ab54a2cca950ffa42cbe",
+      "MD5-CAM-1.0.1" : "0e7896bbc1868566e569309effcb3ef3",
       "PARENT:MD5-CAM-1.0.1" : "005501C1FA493A4838F5F1121F2870EC"
     },
     "details" : {
@@ -215,8 +215,26 @@
               "children" : [ {
                 "@type" : "C_COMPLEX_OBJECT",
                 "rmTypeName" : "ELEMENT",
+                "occurrences" : "0..0",
                 "nodeId" : "at0002.1",
-                "attributes" : [ ],
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "value",
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "DV_TEXT",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "value",
+                      "children" : [ {
+                        "@type" : "C_STRING",
+                        "rmTypeName" : "STRING",
+                        "constraint" : [ "Measles", "Hepatitis A", "Hepatitis B", "Covid-19" ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  } ]
+                } ],
                 "attributeTuples" : [ ]
               }, {
                 "@type" : "C_COMPLEX_OBJECT",
@@ -241,6 +259,15 @@
                   } ]
                 } ],
                 "attributeTuples" : [ ]
+              }, {
+                "@type" : "C_ARCHETYPE_ROOT",
+                "rmTypeName" : "CLUSTER",
+                "occurrences" : "0..1",
+                "nodeId" : "at0006.1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ],
+                "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-care_journey_metadata-001.v0",
+                "referenceType" : "archetypeOverlay"
               } ]
             } ],
             "attributeTuples" : [ ]
@@ -10966,7 +10993,123 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "23BF02C2A580CB46F49E6342FFF77789"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung bekannter Risikofaktoren für eine identifizierte Krankheit, einen Zustand oder ein anderes potenziell gesundheitsschädliches Problem und / oder einer Beurteilung der Wahrscheinlichkeit, dass die Person in der Zukunft davon betroffen ist.\r\n\r\nDieser Archetyp wurde absichtlich offen und breit angelegt. Das \"Gesundheitsrisiko\" kann aus den Risikofaktoren aus dem einen oder allen den folgenden Bereichen ermittelt werden: medizinische Risikofaktoren, Biomarker, Lebensstil, soziale Risikofaktoren, Berufsrisiko oder Umweltbereich.\r\nDie Absicht dieses Archetyps besteht darin, potentielle Risiken zu einem bestimmten Zeitpunkt zu dokumentieren und Entscheidungen zu unterstützen, die das erkannte Risiko verringern können, sei es durch Kliniker oder die Person selbst.",
+          "keywords" : [ "Einschätzung", "Begutachtung", "Beurteilung", "unerwünscht", "Evaluation", "Gesundheitsstatus", "Befinden", "Gesundheitszustand", "Einschätzung", "Risiko", "Risikofaktor", "Faktor", "Bewertung", "Gesundheit", "Gesundheitsrisiko", "Risikostratifizierung", "Risikostratifikation", "Management" ],
+          "use" : "Der Archetyp \"Bewertung des Gesundheitsrisikos\" wird verwendet, um bekannte Risikofaktoren für eine identifizierte Krankheit, einen Zustand oder ein anderes potenziell gesundheitsschädliches Problem darzustellenn und / oder zur Bewertung der Wahrscheinlichkeit, dass die Person in Zukunft davon betroffen ist.\r\n\r\nDa Risikofaktoren im Laufe der Zeit schrittweise identifiziert werden und das Gesamtrisiko infolgedessen neu bewertet wird, wird der \"Identifizierungszeitpunkt\" das Datum erfassen, an dem der Risikofaktor identifiziert wurde. Das Datenelement \"Letzte Aktualisierung\" gibt an, wann die gesamte Bewertung zuletzt aktualisiert wurde.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fi" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fi"
+          },
+          "purpose" : "*To record known risk factors for an identified disease, condition, or other potentially adverse health issue, and/or an evaluation of the likelihood of the individual experiencing it in the future.\r\n\r\nThis archetype has been deliberately left open and broad in scope. The 'Health Risk' could be determined from risk factors from any or all of: medical; biomarker; lifestyle; social; occupational hazard; or environmental domains.\r\n\r\nThe intent of this archetype is to document potential risk at a point in time, and to support decision-making that may reduce the identified risk, whether by clinicians or the individual themselves.(en)",
+          "keywords" : [ "*assessment(en)", "*risk(en)", "*evaluation(en)", "*adverse(en)", "*factor(en)", "*health(en)", "*issue(en)", "*estimated(en)", "*management(en)", "*risk factor(en)", "*risk stratification(en)" ],
+          "use" : "*Use to record known risk factors for an identified disease, condition, or other potentially adverse health issue, and/or an evaluation of the likelihood of the individual experiencing it in the future.\r\n\r\nAs risk factors may be gradually identified over time and the overall risk reassessed as a result, the 'Date identified' will record the date on which each risk factor has been identified and the 'Last updated' data element will record the last time that the whole assessment was updated.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera kända riskfaktorer för en identifierad sjukdom, tillstånd eller annat potentiellt skadligt hälsotillstånd, och / eller en utvärdering av sannolikheten för att personen upplever det i framtiden.\r\n\r\nDenna arketyp har medvetet lämnats öppen och omfattande. Risken kan bestämmas av riskfaktorer från någon eller alla följande domäner: medicinska; biomarkör; livsstil; social; yrkesrisk; eller miljödomäner.\r\n\r\nAvsikten med denna arketyp är att dokumentera potentiell risk vid en tidpunkt och att stödja beslutsfattande som kan minska den identifierade risken, vare sig av kliniker eller individen själva.",
+          "keywords" : [ "Bedömning", "Risk", "Utvärdering", "Negativ", "Faktor", "Hälsa", "Fråga", "Beräknad", "Förvaltning", "Riskfaktor", "Risklagstiftning", "Hälsorisk" ],
+          "use" : "Används för att registrera kända riskfaktorer för en identifierad sjukdom, tillstånd eller annat potentiellt skadligt hälsotillstånd, och / eller en utvärdering av sannolikheten för att personen drabbas av det i framtiden.\r\n\r\nEftersom riskfaktorer kan identifieras gradvis över tiden och den övergripande risken omvärderas som ett resultat kommer den \"identifierade Datum\" att registrera det datum då varje riskfaktor har identifierats och \"Senast uppdaterad\" dataelement registrerar sista gången att hela utvärderingen uppdaterades.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Brukes til å registrere kjente risikofaktorer for en spesifikk sykdom, tilstand eller andre potensielt uønskede helseproblemer. Det kan også registreres en vurdering av sannsynligheten for at individet vil oppleve den aktuelle tilstanden i fremtiden.\r\n\r\nArketypen er med vilje laget åpen og bred. Helserisikoen kan bestemmes ut fra risikofaktorer fra det medisinske feltet, biomarkører, livsstil, sosiale forhold, yrkesmessige farer eller omgivelser.\r\n\r\nIntensjonen med arketypen er å dokumentere en potensiell risiko ved et gitt tidspunkt, og å støtte beslutninger som kan redusere risikoen enten de er tatt av en kliniker eller av individet selv.",
+          "keywords" : [ "vurdering", "risiko", "evaluering", "uønsket", "faktor", "helse", "problem", "estimert", "håndtering", "risikofaktor", "risikostratifisering" ],
+          "use" : "Brukes til å registrere kjente risikofaktorer for en spesifikk sykdom, tilstand eller andre potensielt uønskede helseproblemer. Det kan også registreres en vurdering av sannsynligheten for at individet vil oppleve den aktuelle tilstanden i fremtiden.\r\n\r\nSiden risikofaktorer gradvis kan identifiseres over tid og den generelle risikoen revurderes som et resultat, vil 'Dato identifisert' registrere datoen hvor hver risikofaktor er identifisert og dataelementet 'Sist oppdatert' registrerer siste gang hele vurderingen ble oppdatert.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Para el registro de factores de riesgo para una enfermedad, condición u otro problema potencialmente adverso para la salud, y/o para la evaluación de la probabilidad de que el individuo experimente estas situaciones en el futuro.\r\nEste arquetipo se mantiene deliberadamente abierto y amplio en su alcance. El 'Riesgo para la Salud' puede ser determinado a partir de todos o algunos de los factores de riesgo: médicos, marcadores biológicos, estilo de vidas, sociales, riesgo ocupacional o cuestiones ambientales.\r\nEl propósito de este arquetipo es la documentación de un riesgo potencial en un punto en el tiempo, y para asistir en la toma de decisiones que puedan reducir el mencionado riesgo, ya sea por parte de los médicos o del/de los individuo/s mismo/s.",
+          "keywords" : [ "evaluación", "riesgo", "adverso", "factor", "salud", "problema", "estimado", "manejo", "factor de riesgo", "estratificación de riesgo" ],
+          "use" : "*Use to record known risk factors for an identified disease, condition, or other potentially adverse health issue, and/or an evaluation of the likelihood of the individual experiencing it in the future.\r\n\r\nAs risk factors may be gradually identified over time and the overall risk reassessed as a result, the 'Date identified' will record the date on which each risk factor has been identified and the 'Last updated' data element will record the last time that the whole assessment was updated.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record known risk factors for an identified disease, condition, or other potentially adverse health issue, and/or an evaluation of the likelihood of the individual experiencing it in the future.\r\n\r\nThis archetype has been deliberately left open and broad in scope. The 'Health Risk' could be determined from risk factors from any or all of: medical; biomarker; lifestyle; social; occupational hazard; or environmental domains.\r\n\r\nThe intent of this archetype is to document potential risk at a point in time, and to support decision-making that may reduce the identified risk, whether by clinicians or the individual themselves.",
+          "keywords" : [ "assessment", "risk", "evaluation", "adverse", "factor", "health", "issue", "estimated", "management", "risk factor", "risk stratification" ],
+          "use" : "Use to record known risk factors for an identified disease, condition, or other potentially adverse health issue, and/or an evaluation of the likelihood of the individual experiencing it in the future.\r\n\r\nAs risk factors may be gradually identified over time and the overall risk reassessed as a result, the 'Date identified' will record the date on which each risk factor has been identified and the 'Last updated' data element will record the last time that the whole assessment was updated.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل التخاطر/احتمالية الخطر لظرف صحي قد يحدث في المستقبل",
+          "keywords" : [ "تقييم" ],
+          "use" : "*Use to record known risk factors for an identified disease, condition, or other potentially adverse health issue, and/or an evaluation of the likelihood of the individual experiencing it in the future.\r\n\r\nAs risk factors may be gradually identified over time and the overall risk reassessed as a result, the 'Date identified' will record the date on which each risk factor has been identified and the 'Last updated' data element will record the last time that the whole assessment was updated.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Registrare i fattori di rischio noti per una malattia, una condizione o un altro problema di salute potenzialmente avverso e/o una valutazione della probabilità che l'individuo ne sia colpito in futuro.\r\n\r\nQuesto archetipo è stato deliberatamente lasciato aperto e di ampio respiro. Il \"rischio per la salute\" potrebbe essere determinato dai fattori di rischio di uno o di tutti i settori: medico, biomarcatore, stile di vita, sociale, rischio professionale o ambientale.\r\n\r\nL'intento di questo archetipo è quello di documentare il rischio potenziale in un determinato momento e di supportare il processo decisionale che può ridurre il rischio identificato, sia da parte dei medici che dell'individuo stesso.",
+          "keywords" : [ "valutazione", "rischio", "valutazione", "avverso", "fattore", "salute", "numero", "stimato", "gestione", "fattore di rischio", "stratificazione del rischio" ],
+          "use" : "Utilizzare per registrare i fattori di rischio noti per una malattia, condizione o altro problema di salute potenzialmente avverso identificato, e/o una valutazione della probabilità che l'individuo ne sia colpito in futuro.\r\n\r\nPoiché i fattori di rischio possono essere identificati gradualmente nel tempo e il rischio complessivo può essere rivalutato di conseguenza, la \"Data identificata\" registrerà la data in cui ciascun fattore di rischio è stato identificato e l'elemento di dati \"Ultimo aggiornamento\" registrerà l'ultima volta che l'intera valutazione è stata aggiornata.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.health_risk.v1",
     "differential" : true,
@@ -11403,7 +11546,162 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Eine generische Abschnittsüberschrift eines Templates, welche entsprechend dem spezifischen klinischen Kontext umbenannt werden sollte.",
+          "keywords" : [ "Abschnitt", "Template", "Überschrift", "Ad hoc", "Abschnittsüberschrift" ],
+          "use" : "Dieser Archetyp kann für die Erstellung einer Abschnittsüberschrift in einem Template verwendet werden. Die Überschrift kann, passend zu dem jeweiligen klinischen Kontext, umbenannt werden. Zum Beispiel: \"Ad hoc Überschrift\" wird umbenannt in \"Untersuchungsergebnisse\".\r\n\r\n",
+          "misuse" : "Die Überschrift sollte in einem Template nicht unverändert verwendet werden.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext.",
+          "keywords" : [ ],
+          "use" : "Används för att skapa en avsnittsrubrik i en openEHR-mall som sedan döps om för att passa in i den specifika kliniska kontexten. Exempelvis \"Rubrik\" döps om till \"Undersökningsfynd\".",
+          "misuse" : "Ska inte lämnas oförändrad i en openEHR-mall.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "Базовый заголовок раздела, должен быть переименован в локальном шаблоне ",
+          "keywords" : [ "раздел", "шаблон", "заготовка", "название", "образец" ],
+          "use" : "используется для создания и именования разделов в локальных шаблонах",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "Brukes som en generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst.",
+          "keywords" : [ ],
+          "use" : "Brukes til å lage en seksjonsoverskrift i en templat, hvis navn deretter endres for å passe i den aktuelle kliniske konteksten. For eksempel: \"Templat-overskrift\" endret til \"Funn ved undersøkelse\", \"Anamnese\", \"Personopplysninger\" eller \"Oppsummering\".",
+          "misuse" : "Skal ikke stå med uendret navn i en templat.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Proporcionar un encabezado de sección de tipo genérico que será renombrado en una plantilla para su empleo en un contexto clínico específico.",
+          "keywords" : [ ],
+          "use" : "Utilizar para construir un encabezado de sección en una plantilla y que será renombrado para su empleo en un contexto clínico específico. Por ejemplo, \"Encabezado ad hoc\" puede renombrarse como \"Hallazgos de examen\".",
+          "misuse" : "No debe mantenerse sin cambios en una plantilla.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Oferecer um cabeçalho de uma sessão genérica que será renomeado no template para adequar-se a um contexto clínico específico.",
+          "keywords" : [ "cabeçalho" ],
+          "use" : "Utilize para construir um cabeçalho de uma sessão (de um template) que será renomeada para adequar-se a um contexto clínico específico. Por exemplo: \"cabeçalho Ad hoc\" renomeado para \"Achados de exame\".",
+          "misuse" : "Não deve manter a configuração original no template.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To provide a generic section header which will be renamed in a template to suit a specific clinical context.",
+          "keywords" : [ ],
+          "use" : "Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".",
+          "misuse" : "Not to be left unchanged in a template.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)",
+          "keywords" : [ ],
+          "use" : "*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "it" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "it"
+          },
+          "purpose" : "Fornire un'intestazione generica della sezione che sarà rinominata in un template per adattarsi ad uno specifico contesto clinico.",
+          "keywords" : [ ],
+          "use" : "Usato per costruire un'intestazione di sezione in un template che sarà rinominato in base al contesto clinico specifico. Per esempio: \"Intestazione ad hoc\" rinominata in \"Risultati dell'esame\".",
+          "misuse" : "Non deve essere lasciato invariato in un template.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "*To provide a generic section header which will be renamed in a template to suit a specific clinical context.(en)",
+          "keywords" : [ ],
+          "use" : "*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)",
+          "misuse" : "*Not to be left unchanged in a template.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
     "differential" : true,
@@ -11609,6 +11907,124 @@
       },
       "otherDetails" : { }
     } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "627791bb-165a-4476-b062-c44fe36201da",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "73FB8E597AB789C389FEB2AC3ECBC60B"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.care_journey_metadata.v0",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-care_journey_metadata-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0002.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "defaultValue" : {
+                "@type" : "DV_IDENTIFIER"
+              },
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0003.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_IDENTIFIER",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Case protocol",
+            "description" : "The name , preferably coded of the Care plan with which this journey is associated, and against which the composition was updated."
+          },
+          "at0003.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Case identifier",
+            "description" : "A patient-journey specific identifier i.e unique to a patient's journey along a specific care pathway."
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "0742452c-9047-42cb-aafe-654f90469e4c",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ ]
   } ],
   "originalLanguage" : {
     "terminologyId" : {
