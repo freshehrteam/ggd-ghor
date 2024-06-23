@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "283bab30b870dd0591575e11c552ca05",
-      "PARENT:MD5-CAM-1.0.1" : "0013a59e26cd135547b1489ff5f46916"
+      "MD5-CAM-1.0.1" : "7d023b41b97c112cfeb4d164a83e13e0",
+      "PARENT:MD5-CAM-1.0.1" : "0013a59e26cd135547b1489ff5f46916",
+      "sem_ver" : "1.0.0-alpha.1",
+      "build_uid" : ""
     },
     "details" : {
       "en" : {
@@ -41,7 +43,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-CLUSTER.infectioncontrol metadata.v1"
+    "value" : "openEHR-EHR-CLUSTER.infectioncontrol_metadata.v1"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -76,7 +78,6 @@
       }, {
         "@type" : "C_COMPLEX_OBJECT",
         "rmTypeName" : "ELEMENT",
-        "occurrences" : "0..0",
         "nodeId" : "at0002.1",
         "attributes" : [ {
           "@type" : "C_ATTRIBUTE",
@@ -105,14 +106,21 @@
     "@type" : "ARCHETYPE_TERMINOLOGY",
     "conceptCode" : "at0000",
     "termDefinitions" : {
-      "en" : { }
+      "en" : {
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Outbreak identifier",
+          "description" : "The identifier , preferably coded, of the Care plan with which this journey is associated, and against which the composition was updated."
+        }
+      }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "181576ea-bebc-30d9-840e-929465cdd76d",
+  "buildUid" : "3909fc56-6658-3b38-95b8-335a9a3aa516",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
