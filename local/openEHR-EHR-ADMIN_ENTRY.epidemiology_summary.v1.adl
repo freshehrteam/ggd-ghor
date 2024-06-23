@@ -1,0 +1,184 @@
+archetype (adl_version=1.4; uid=84321a50-61c5-4793-a3db-793c788776dd)
+	openEHR-EHR-ADMIN_ENTRY.epidemiology_summary.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"ian@freshehr.com">
+		["date"] = <"2024-06-23">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"b92259560f65eab3625694762e405aa9">
+		["build_uid"] = <"95549abe-2727-3310-9bb0-f31de8f711ee">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Epidemiology summary
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Date asserted
+						value matches {
+							DV_DATE matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Confirmed contact?
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0004,    -- Yes
+									at0005,    -- No
+									at0006]    -- Unknown
+								}
+							}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Single source identified
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0008,    -- Yes
+									at0009,    -- No
+									at0010]    -- Unknown
+								}
+							}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..*} matches {    -- Osiris number
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Multiple sources identified
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0013,    -- Yes
+									at0014,    -- No
+									at0015]    -- Unknown
+								}
+							}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {0..1} matches {    -- Likely country of infection
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					CLUSTER[at0017] occurrences matches {0..1} matches {    -- Settings of secondary infection
+						items cardinality matches {1..*; unordered} matches {
+							allow_archetype CLUSTER[at0018] occurrences matches {0..*} matches {    -- Setting
+								include
+									archetype_id/value matches {/.*/}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Epidemiology summary">
+					description = <"Epidemiology summary">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Date asserted">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Confirmed contact?">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Single source identified">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Osiris number">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Multiple sources identified">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Yes">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"No">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Unknown">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Likely country of infection">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Settings of secondary infection">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Setting">
+					description = <"">
+				>
+			>
+		>
+	>
