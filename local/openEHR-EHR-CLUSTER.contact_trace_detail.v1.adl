@@ -9,12 +9,12 @@ language
 
 description
 	original_author = <
+		["date"] = <"2024-06-23">
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
 		["email"] = <"ian@freshehr.com">
-		["date"] = <"2024-06-23">
 	>
-	lifecycle_state = <"unmanaged">
+	lifecycle_state = <"in_development">
 	details = <
 		["en"] = <
 			language = <[ISO_639-1::en]>
@@ -22,12 +22,13 @@ description
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR Foundation">
-		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR Foundation">
-		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"db2faef0ee4fd6c02a630078329b3f9c">
+		["custodian_organisation"] = <"feshEHR Clinical Informatics">
+		["original_namespace"] = <"com.freshehr">
+		["original_publisher"] = <"freshEHR Clinical Informatics Ltd.">
+		["custodian_namespace"] = <"com.freshehr">
 		["build_uid"] = <"1085e1f8-169c-3f21-b926-2a0ad3187a91">
+		["revision"] = <"1.0.0.-alpha.1">
+		["MD5-CAM-1.0.1"] = <"9cf96b636b5b83dc4550e34780c09ac1">
 	>
 
 definition
