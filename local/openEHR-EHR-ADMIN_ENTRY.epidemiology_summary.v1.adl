@@ -26,7 +26,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"b92259560f65eab3625694762e405aa9">
+		["MD5-CAM-1.0.1"] = <"658aaff416bfa1e809f8935c35584973">
 		["build_uid"] = <"95549abe-2727-3310-9bb0-f31de8f711ee">
 	>
 
@@ -35,6 +35,26 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0019] occurrences matches {0..1} matches {    -- Notification received
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0020] occurrences matches {0..1} matches {    -- GGD notes
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0021] occurrences matches {0..1} matches {    -- Internal GGD notes
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0022] occurrences matches {0..1} matches {    -- EPI notes
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
 					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Date asserted
 						value matches {
 							DV_DATE matches {*}
@@ -177,6 +197,22 @@ ontology
 				>
 				["at0018"] = <
 					text = <"Setting">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Notification received">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"GGD notes">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Internal GGD notes">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"EPI notes">
 					description = <"">
 				>
 			>
