@@ -9,7 +9,7 @@ language
 
 description
 	original_author = <
-		["date"] = <"2022-03-10">
+		["date"] = <"2024-06-23">
 		["name"] = <"Ian McNicoll">
 		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
 		["email"] = <"ian@freshehr.com">
@@ -27,15 +27,15 @@ description
 		["original_namespace"] = <"uk.org.clinicalmodels">
 		["original_publisher"] = <"Apperta UK">
 		["custodian_namespace"] = <"uk.org.clinicalmodels">
-		["MD5-CAM-1.0.1"] = <"9bbc214ef48410a38c2afc8b56b00070">
+		["MD5-CAM-1.0.1"] = <"0013a59e26cd135547b1489ff5f46916">
 		["build_uid"] = <"0742452c-9047-42cb-aafe-654f90469e4c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- infection_control_metadata
+	CLUSTER[at0000] matches {    -- Infection control metadata
 		items cardinality matches {1..*; unordered} matches {
-			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Care plan name
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Protocol name
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -46,10 +46,9 @@ definition
 					DV_IDENTIFIER matches {*}
 				}
 			}
-			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Patient journey identifier
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Case identifier
 				value matches {
 					DV_TEXT matches {*}
-					DV_IDENTIFIER matches {*}
 				}
 			}
 		}
@@ -60,11 +59,11 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"infection_control_metadata">
-					description = <"Tp capture Care plan metadata">
+					text = <"Infection control metadata">
+					description = <"Tp capture Infection control metadata">
 				>
 				["at0001"] = <
-					text = <"Care plan name">
+					text = <"Protocol name">
 					description = <"The name , preferably coded of the Care plan with which this journey is associated, and against which the composition was updated.">
 				>
 				["at0002"] = <
@@ -72,7 +71,7 @@ ontology
 					description = <"The identifier , preferably coded, of the Care plan with which this journey is associated, and against which the composition was updated.">
 				>
 				["at0003"] = <
-					text = <"Patient journey identifier">
+					text = <"Case identifier">
 					description = <"A patient-journey specific identifier i.e unique to a patient's journey along a specific care pathway.">
 				>
 			>
