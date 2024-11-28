@@ -1,0 +1,126 @@
+archetype (adl_version=1.4; uid=5d5cb0cd-5073-4356-b71b-3a9d5eac850d)
+	openEHR-EHR-ADMIN_ENTRY.public_health_incident.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["name"] = <"Ian McNicoll">
+		["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+		["email"] = <"ian@freshehr.com">
+		["date"] = <"2024-11-28">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"d71128ad4c4bf36aeddb119f2789fdcc">
+		["build_uid"] = <"f9de7509-c22b-336e-86d0-663c6b8ee5ec">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- Public health incident
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Incident status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0008,    -- Notified
+									at0009,    -- Confirmed
+									at0010,    -- Refuted
+									at0011]    -- Closed
+								}
+							}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Date notified
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Date closed
+						value matches {
+							DV_DATE_TIME matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Category
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..*} matches {    -- Causative agent/factor
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Public health incident">
+					description = <"Public health incident">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Incident status">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Date notified">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Date closed">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Category">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Causative agent/factor">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Notified">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Confirmed">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Refuted">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Closed">
+					description = <"">
+				>
+			>
+		>
+	>
